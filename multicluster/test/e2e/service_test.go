@@ -140,6 +140,7 @@ func testStretchedNetworkPolicyUpdatePolicy(t *testing.T, data *MCTestData) {
 func (data *MCTestData) testMCServiceConnectivity(t *testing.T) {
 	data.probeMCServiceFromCluster(t, eastCluster, westClusterTestService)
 	data.probeMCServiceFromCluster(t, westCluster, eastClusterTestService)
+	data.probeMCServiceFromCluster(t, westCluster, westClusterTestService)
 }
 
 func (data *MCTestData) probeMCServiceFromCluster(t *testing.T, clusterName string, serviceName string) {
